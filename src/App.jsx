@@ -4,20 +4,21 @@ import { Github, Linkedin, Mail, FileText } from 'lucide-react';
 const Portfolio = () => {
     return (
         <div className="min-h-screen bg-gray-100">
-            /* Header/Hero Section */
+            {/* Header/Hero Section */}
             <header className="bg-white shadow-md">
                 <div className="max-w-4xl mx-auto py-8 px-4 text-center">
-                    <h1 className="text-4xl font-bold text-gray-900">Your Name</h1>
-                    <p className="text-xl text-gray-600 mt-2">Full Stack Developer</p>
+                    <h1 className="text-4xl font-bold text-gray-900">John Hartnett</h1>
+                    <p className="text-xl text-gray-600 mt-2">Major: Computer Science</p>
+                    <p className="text-lg text-gray-600 mt-1">Minor: Cyber Security</p>
                     
                     <div className="flex justify-center gap-6 mt-4">
-                        <a href="#" className="text-gray-600 hover:text-gray-900">
+                        <a href="https://github.com/A1fr0mDay1" className="text-gray-600 hover:text-gray-900" target="_blank" rel="noopener noreferrer">
                             <Github className="w-6 h-6" />
                         </a>
-                        <a href="#" className="text-gray-600 hover:text-gray-900">
+                        <a href="https://www.linkedin.com/in/john-hartnett-1695b2277/" className="text-gray-600 hover:text-gray-900" target="_blank" rel="noopener noreferrer">
                             <Linkedin className="w-6 h-6" />
                         </a>
-                        <a href="mailto:your.email@example.com" className="text-gray-600 hover:text-gray-900">
+                        <a href="mailto:john.r.hartnett03@gmail.com" className="text-gray-600 hover:text-gray-900">
                             <Mail className="w-6 h-6" />
                         </a>
                     </div>
@@ -30,13 +31,7 @@ const Portfolio = () => {
                 <section className="mb-12">
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">About Me</h2>
                     <p className="text-gray-700">
-                        A passionate developer with experience in building web applications.
-                    </p>
-                    <p className="text-gray-700">
-                        Skilled in: Java, Javascript, Python, SQL, Neo4j, MongoDB, React, HTML.
-                    </p>
-                    <p className="text-gray-700">
-                        Intermediate knowledge in: C/C#, React, CSS.
+                        Hello and welcome to my website. My name is John Hartnett and i am a Computer Science major with a minor in Cyber Security. I am a full-stack developer with experience in building web applications using React, Node.js, and MongoDB. I am passionate about learning new technologies and solving complex problems. I also love working with others because often times they can see solutions I have not figured out yet. In my free time, I enjoy working on side projects and contributing to open-source.
                     </p>
                 </section>
 
@@ -46,8 +41,8 @@ const Portfolio = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
                             {
-                                title: "Project 1",
-                                description: "Built a full-stack e-commerce platform using React, Node.js, and MongoDB. Implemented user authentication, product catalog, and payment processing.",
+                                title: "AFK Leveling",
+                                description: "This script simulates pressing number keys (1-5) and clicking the mouse in a controlled, randomized pattern. This appears designed for automating repetitive inputs, potentially for gaming",
                                 link: "#"
                             },
                             {
@@ -80,14 +75,29 @@ const Portfolio = () => {
 
                 {/* Skills Section */}
                 <section className="mb-12">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Skills</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Technical Skills</h2>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {[
-                            'React', 'Node.js', 'TypeScript',
-                            'Python', 'SQL', 'AWS',
-                            'Git', 'Docker', 'CI/CD'
+                            'Java', 'Python', 'HTML/CSS', 'JavaScript', 
+                            'React', 'git', 'ARM Assembly','SQL', 
+                            'MongoDB', 'Neo4j', 'Excel', 'PowerPoint',
                         ].map((skill) => (
                             <div key={skill} className="bg-white p-4 rounded-lg shadow-md text-center">
+                                {skill}
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Personal Skills Section */}
+                <section className="mb-12">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Personal Skills</h2>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {[
+                            'Collaborative Leadership', 'Strategic Planning', 'Critical Analysis', 'Project Coordination', 
+                            'Communication', 'Project Management', 'Conflict Resolution', 'Process Optimization',
+                        ].map((skill) => (
+                            <div key={skill} className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center min-h-[100px]">
                                 {skill}
                             </div>
                         ))}
@@ -100,10 +110,10 @@ const Portfolio = () => {
                     <div className="space-y-6">
                         {[
                             {
-                                role: 'Senior Developer',
-                                company: 'Company A',
-                                period: '2020 - Present',
-                                description: 'Led development of key features and mentored junior developers.'
+                                role: 'Patient Manager Assistant',
+                                company: 'Amplifed Wellness',
+                                period: 'May 2024 - Present',
+                                description: 'Responsible for calling patients to answer questions and provide information Responsible for scheduling seminars around the country, Responsible for tracking and moving data to new systems'
                             },
                             {
                                 role: 'Full Stack Developer',
@@ -122,30 +132,34 @@ const Portfolio = () => {
                 </section>
 
                 {/* Contact Section */}
-                <section>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact</h2>
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                        <p className="text-gray-700 mb-4">
-                            Interested in working together? Get in touch!
-                        </p>
-                        <div className="flex gap-4">
-                            <a href="mailto:your.email@example.com" className="flex items-center gap-2 text-blue-600 hover:text-blue-800">
-                                <Mail className="w-5 h-5" />
-                                Email me
-                            </a>
-                            <a href="#" className="flex items-center gap-2 text-blue-600 hover:text-blue-800">
-                                <FileText className="w-5 h-5" />
-                                Download Resume
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </main>
+                                <section>
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact</h2>
+                                    <div className="bg-white p-6 rounded-lg shadow-md">
+                                        <p className="text-gray-700 mb-4">
+                                            Please feel free to reach out!
+                                        </p>
+                                        <div className="flex gap-4">
+                                            <a href="mailto:john.r.hartnett03@gmail.com" className="flex items-center gap-2 text-blue-600 hover:text-blue-800">
+                                                <Mail className="w-5 h-5" />
+                                                Email me
+                                            </a>
+                                            <a
+                                                href="/assets/resume.pdf"
+                                                download="resume.pdf"
+                                                className="flex items-center gap-2 text-blue-600 hover:text-blue-800"
+                                            >
+                                                <FileText className="w-5 h-5" />
+                                                Download Resume
+                                            </a>
+                                        </div>
+                                    </div>
+                                </section>
+                            </main>
 
-            {/* Footer */}
+                            {/* Footer */}
             <footer className="bg-white shadow-lg mt-12">
                 <div className="max-w-4xl mx-auto py-6 px-4 text-center text-gray-600">
-                    © {new Date().getFullYear()} Your Name. All rights reserved.
+                    © {new Date().getFullYear()} John Hartnett. All rights reserved.
                 </div>
             </footer>
         </div>
