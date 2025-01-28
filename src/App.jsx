@@ -5,14 +5,12 @@ const Portfolio = () => {
     const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
-        // Check if user has a dark mode preference
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
             setDarkMode(true);
         }
     }, []);
 
     useEffect(() => {
-        // Update document class when dark mode changes
         if (darkMode) {
             document.documentElement.classList.add('dark');
         } else {
@@ -20,15 +18,31 @@ const Portfolio = () => {
         }
     }, [darkMode]);
 
-    const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
+    const projects = [
+        {
+            title: "AFK Leveling",
+            description: "A sophisticated automation script utilizing randomized patterns for gaming interactions. Built with Python, featuring configurable timing and failsafe mechanisms.",
+            link: "https://github.com/A1fr0mDay1/AFK-Farming",
+            tech: ["Python", "Automation"]
+        },
+    ];
+
+    const skills = {
+        technical: [
+            'Java', 'Python', 'HTML/CSS', 'JavaScript',
+            'React', 'Git', 'ARM Assembly', 'SQL',
+            'MongoDB', 'Neo4j', 'Excel', 'PowerPoint'
+        ],
+        personal: [
+            'Communication', 'Leadership', 'Problem-solving', 'Teamwork',
+            'Time Management', 'Adaptability', 'Process Optimization', 'Emotional Intelligence'
+        ]
     };
 
     return (
-        <div className={`min-h-screen ${darkMode ? 'bg-gray-900' : 'bg-gray-100'}`}>
-            {/* Dark Mode Toggle */}
+        <div className={`min-h-screen transition-colors duration-200 ${darkMode ? 'bg-gray-900' : 'bg-gray-100'}`}>
             <button
-                onClick={toggleDarkMode}
+                onClick={() => setDarkMode(!darkMode)}
                 className="fixed top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                 aria-label="Toggle dark mode"
             >
@@ -39,52 +53,87 @@ const Portfolio = () => {
                 )}
             </button>
 
-            {/* Header/Hero Section */}
-            <header className={`${darkMode ? 'bg-gray-800 shadow-gray-900' : 'bg-white shadow-md'}`}>
+            <header className={`${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg transition-colors duration-200`}>
                 <div className="max-w-4xl mx-auto py-8 px-4 text-center">
                     <h1 className={`text-4xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>John Hartnett</h1>
-                    <p className={`text-xl ${darkMode ? 'text-gray-300' : 'text-gray-600'} mt-2`}>Major: Computer Science</p>
-                    <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-600'} mt-1`}>Minor: Cyber Security</p>
+                    <p className={`text-xl ${darkMode ? 'text-gray-300' : 'text-gray-600'} mt-2`}>Computer Science Major</p>
+                    <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-600'} mt-1`}>Cyber Security Minor</p>
 
                     <div className="flex justify-center gap-6 mt-4">
-                        <a href="https://github.com/A1fr0mDay1" className={`${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`} target="_blank" rel="noopener noreferrer">
+                        <a
+                            href="https://github.com/A1fr0mDay1"
+                            className={`${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <Github className="w-6 h-6" />
                         </a>
-                        <a href="https://www.linkedin.com/in/john-hartnett-1695b2277/" className={`${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`} target="_blank" rel="noopener noreferrer">
+                        <a
+                            href="https://www.linkedin.com/in/john-hartnett-1695b2277/"
+                            className={`${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <Linkedin className="w-6 h-6" />
                         </a>
-                        <a href="mailto:john.r.hartnett03@gmail.com" className={`${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>
+                        <a
+                            href="mailto:john.r.hartnett03@gmail.com"
+                            className={`${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}
+                        >
                             <Mail className="w-6 h-6" />
                         </a>
                     </div>
                 </div>
             </header>
 
-            {/* Main Content */}
             <main className="max-w-4xl mx-auto py-12 px-4">
-                {/* About Section */}
                 <section className="mb-12">
                     <h2 className={`text-2xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>About Me</h2>
-                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                        Hello and welcome to my website. My name is John Hartnett and I am a Computer Science major with a minor in Cyber Security. I am a full-stack developer with experience in building web applications using React, Node.js, and MongoDB. I am passionate about learning new technologies and solving complex problems. I also love working with others because often times they can see solutions I have not figured out yet. In my free time, I enjoy working on side projects and contributing to open-source.
+                    <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed`}>
+                        Hello! I'm John Hartnett, a Computer Science major with a focus on Cyber Security. As a full-stack developer,
+                        I specialize in building web applications using React, Node.js, and MongoDB. I'm deeply passionate about
+                        exploring new technologies and tackling complex problems. I thrive in collaborative environments, valuing
+                        the diverse perspectives team members bring to problem-solving. When I'm not coding, you'll find me
+                        contributing to open-source projects and staying current with the latest tech trends.
                     </p>
                 </section>
 
-                {/* Projects Section */}
                 <section className="mb-12">
-                    <h2 className={`text-2xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Projects</h2>
+                    <h2 className={`text-2xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Projects</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {[
-                            {
-                                title: "AFK Leveling",
-                                description: "This script simulates pressing number keys (1-5) and clicking the mouse in a controlled, randomized pattern.",
-                                link: "https://github.com/A1fr0mDay1/AFK-Farming"
-                            },
-                        ].map((project, index) => (
-                            <div key={index} className={`p-6 rounded-lg transition-shadow ${darkMode ? 'bg-gray-800 hover:shadow-lg hover:shadow-gray-700' : 'bg-white shadow-md hover:shadow-lg'}`}>
-                                <h3 className={`text-xl font-semibold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>{project.title}</h3>
-                                <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>{project.description}</p>
-                                <a href={project.link} className="text-blue-500 hover:text-blue-400 font-medium inline-flex items-center">
+                        {projects.map((project, index) => (
+                            <div
+                                key={index}
+                                className={`p-6 rounded-lg transition-all duration-200 ${darkMode
+                                        ? 'bg-gray-800 hover:shadow-lg hover:shadow-gray-700'
+                                        : 'bg-white shadow-md hover:shadow-lg'
+                                    }`}
+                            >
+                                <h3 className={`text-xl font-semibold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                                    {project.title}
+                                </h3>
+                                <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                                    {project.description}
+                                </p>
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    {project.tech.map((tech, i) => (
+                                        <span
+                                            key={i}
+                                            className={`text-sm px-2 py-1 rounded ${darkMode
+                                                    ? 'bg-gray-700 text-gray-300'
+                                                    : 'bg-gray-200 text-gray-700'
+                                                }`}
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                                <a
+                                    href={project.link}
+                                    className="text-blue-500 hover:text-blue-400 font-medium inline-flex items-center transition-colors"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     View Project
                                     <span className="ml-1">→</span>
                                 </a>
@@ -93,27 +142,74 @@ const Portfolio = () => {
                     </div>
                 </section>
 
-                {/* Skills Section */}
                 <section className="mb-12">
-                    <h2 className={`text-2xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Technical Skills</h2>
+                    <h2 className={`text-2xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                        Technical Skills
+                    </h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {[
-                            'Java', 'Python', 'HTML/CSS', 'JavaScript',
-                            'React', 'git', 'ARM Assembly', 'SQL',
-                            'MongoDB', 'Neo4j', 'Excel', 'PowerPoint',
-                        ].map((skill) => (
-                            <div key={skill} className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-white shadow-md text-gray-900'}`}>
+                        {skills.technical.map((skill) => (
+                            <div
+                                key={skill}
+                                className={`p-4 rounded-lg text-center transition-colors ${darkMode
+                                        ? 'bg-gray-800 text-gray-300'
+                                        : 'bg-white shadow-md text-gray-900'
+                                    }`}
+                            >
                                 {skill}
                             </div>
                         ))}
                     </div>
                 </section>
 
-                {/* Footer */}
-                <footer className={`mt-12 py-6 text-center ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    © {new Date().getFullYear()} John Hartnett. All rights reserved.
-                </footer>
+                <section className="mb-12">
+                    <h2 className={`text-2xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                        Personal Skills
+                    </h2>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {skills.personal.map((skill) => (
+                            <div
+                                key={skill}
+                                className={`p-4 rounded-lg text-center transition-colors ${darkMode
+                                        ? 'bg-gray-800 text-gray-300'
+                                        : 'bg-white shadow-md text-gray-900'
+                                    }`}
+                            >
+                                {skill}
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section>
+                    <h2 className={`text-2xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Contact</h2>
+                    <div className={`p-6 rounded-lg ${darkMode ? 'bg-gray-800' : 'bg-white shadow-md'}`}>
+                        <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                            I'm always open to discussing new opportunities and collaborations. Feel free to reach out!
+                        </p>
+                        <div className="flex gap-4">
+                            <a
+                                href="mailto:john.r.hartnett03@gmail.com"
+                                className="flex items-center gap-2 text-blue-500 hover:text-blue-400 transition-colors"
+                            >
+                                <Mail className="w-5 h-5" />
+                                Email me
+                            </a>
+                            <a
+                                href="/assets/resume.pdf"
+                                download="resume.pdf"
+                                className="flex items-center gap-2 text-blue-500 hover:text-blue-400 transition-colors"
+                            >
+                                <FileText className="w-5 h-5" />
+                                Download Resume
+                            </a>
+                        </div>
+                    </div>
+                </section>
             </main>
+
+            <footer className={`mt-12 py-6 text-center ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                © {new Date().getFullYear()} John Hartnett. All rights reserved.
+            </footer>
         </div>
     );
 };
