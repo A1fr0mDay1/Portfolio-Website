@@ -90,12 +90,9 @@ const Portfolio = () => {
                 <section className="mb-12">
                     <h2 className={`text-2xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>About Me</h2>
                     <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed`}>
-                        Hello! I'm John Hartnett, a Computer Science major with a focus on Cyber Security. As a full-stack developer,
-                        I specialize in building web applications using React, Node.js, and MongoDB. I'm deeply passionate about
-                        exploring new technologies and tackling complex problems. I thrive in collaborative environments, valuing
-                        the diverse perspectives team members bring to problem-solving. When I'm not coding, you'll find me
-                        contributing to open-source projects and staying current with the latest tech trends.
-                    </p>
+                        Hello! I'm John Hartnett, a Computer Science major with a focus on Cyber Security. I'm deeply passionate about
+                        exploring new technologies and tackling complex problems. I love computer science and cybersecuirty because the need for it grows every day.
+                        I thrive in collaborative environments, valuing the diverse perspectives team members bring to problem-solving.
                 </section>
 
                 <section className="mb-12">
