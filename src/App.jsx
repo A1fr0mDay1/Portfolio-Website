@@ -93,6 +93,7 @@ const Portfolio = () => {
                         Hello! I'm John Hartnett, a Computer Science major with a focus on Cyber Security. I'm deeply passionate about
                         exploring new technologies and tackling complex problems. I love computer science and cybersecuirty because the need for it grows every day.
                         I thrive in collaborative environments, valuing the diverse perspectives team members bring to problem-solving.
+                    </p>
                 </section>
 
                 <section className="mb-12">
