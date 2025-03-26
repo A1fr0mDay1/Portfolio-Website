@@ -33,6 +33,9 @@ const Portfolio = () => {
             'React', 'Git', 'ARM Assembly', 'SQL',
             'MongoDB', 'Neo4j', 'Excel', 'PowerPoint'
         ],
+        cybersecurity: [
+            'Wireshark', 'Nmap', 'Nessus', 'Metasploit'
+        ],
         personal: [
             'Communication', 'Leadership', 'Problem-solving', 'Teamwork',
             'Time Management', 'Adaptability', 'Process Optimization', 'Emotional Intelligence'
@@ -165,6 +168,25 @@ const Portfolio = () => {
                     </h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {skills.personal.map((skill) => (
+                            <div
+                                key={skill}
+                                className={`p-4 rounded-lg text-center transition-colors ${darkMode
+                                        ? 'bg-gray-800 text-gray-300'
+                                        : 'bg-white shadow-md text-gray-900'
+                                    }`}
+                            >
+                                {skill}
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section className="mb-12">
+                    <h2 className={`text-2xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                        Cybersecurity Skills
+                    </h2>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {skills.cybersecurity.map((skill) => (
                             <div
                                 key={skill}
                                 className={`p-4 rounded-lg text-center transition-colors ${darkMode
