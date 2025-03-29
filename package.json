@@ -2,7 +2,7 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://a1fr0mday1.github.io/Portfolio-Website/",
+  "homepage": "https://A1fr0mDay1.github.io/Portfolio-Website/",
   "dependencies": {
     "cra-template": "1.2.0",
     "lucide-react": "^0.474.0",
