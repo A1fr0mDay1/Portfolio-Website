@@ -25,14 +25,32 @@ const Portfolio = () => {
     // Projects data
     const projects = [
         {
+            title: "Champion Archive",
+            description: "A full-stack web application for League of Legends fans to view champion design evolution, take quizzes, and share gameplay.",
+            link: "https://github.com/A1fr0mDay1/Coms319-Website",
+            tech: ["React", "Node.js", "MongoDB", "Express"]
+        },
+        {
+            title: "PaintBots",
+            description: "A C++ game simulation where programmable robots compete to paint board squares. Features custom configuration parsing and strategic robot AI.",
+            link: "https://github.com/A1fr0mDay1/PaintBots",
+            tech: ["C++", "OOP", "Makefile"]
+        },
+        {
+            title: "MappingAmes",
+            description: "A pathfinding tool for Ames, Iowa using graph data structures. Implements Dijkstra's algorithm and Haversine distance for shortest path calculations.",
+            link: "https://github.com/A1fr0mDay1/MappingAmes",
+            tech: ["C", "Graph Algorithms", "Dijkstra"]
+        },
+        {
             title: "AFK Leveling",
             description: "An automation script utilizing randomized patterns for gaming interactions. Built with Python, featuring configurable timing and failsafe mechanisms.",
             link: "https://github.com/A1fr0mDay1/AFK-Farming",
             tech: ["Python", "Automation"]
         },
         {
-            title: "MoxfeildApp",
-            description: "A wrapper for the website Moxfeild used for managing and analyzing Magic: The Gathering decks. Coverted into an android app. Built with Java.",
+            title: "MoxfieldApp",
+            description: "A wrapper for the website Moxfield used for managing and analyzing Magic: The Gathering decks. Converted into an Android app.",
             link: "https://github.com/A1fr0mDay1/MoxfeildApp",
             tech: ["Java", "Android Studio"]
         }
@@ -41,17 +59,17 @@ const Portfolio = () => {
     // Skills data categorized into technical, cybersecurity, and personal skills
     const skills = {
         technical: [
-            'Java', 'Python', 'HTML/CSS', 'JavaScript',
-            'React', 'Git', 'ARM Assembly', 'SQL',
-            'MongoDB', 'Excel', 'PowerPoint', 'Android Studio',
-            'Visual Studio', 'Eclipse', 'IntelliJ', 'Figma'
+            'Java', 'Python', 'C++', 'C',
+            'HTML/CSS', 'JavaScript', 'React', 'Node.js',
+            'Express.js', 'SQL', 'MongoDB', 'Git',
+            'ARM Assembly', 'Algorithms', 'Excel', 'PowerPoint'
         ],
         cybersecurity: [
             'Wireshark', 'Nmap', 'Nessus', 'Metasploit'
         ],
         personal: [
             'Communication', 'Leadership', 'Problem-solving', 'Teamwork',
-            'Time Management', 'Adaptability', 'Process Optimization', 'Emotional Intelligence'
+            'Time Management', 'Adaptability', 'Process Optimization', 'Patient'
         ]
     };
 
@@ -127,8 +145,8 @@ const Portfolio = () => {
                             <div
                                 key={index}
                                 className={`p-6 rounded-lg transition-all duration-200 ${darkMode
-                                        ? 'bg-gray-800 hover:shadow-lg hover:shadow-gray-700'
-                                        : 'bg-white shadow-md hover:shadow-lg'
+                                    ? 'bg-gray-800 hover:shadow-lg hover:shadow-gray-700'
+                                    : 'bg-white shadow-md hover:shadow-lg'
                                     }`}
                             >
                                 {/* Project title */}
@@ -145,8 +163,8 @@ const Portfolio = () => {
                                         <span
                                             key={i}
                                             className={`text-sm px-2 py-1 rounded ${darkMode
-                                                    ? 'bg-gray-700 text-gray-300'
-                                                    : 'bg-gray-200 text-gray-700'
+                                                ? 'bg-gray-700 text-gray-300'
+                                                : 'bg-gray-200 text-gray-700'
                                                 }`}
                                         >
                                             {tech}
@@ -178,8 +196,8 @@ const Portfolio = () => {
                             <div
                                 key={skill}
                                 className={`p-4 rounded-lg text-center transition-colors ${darkMode
-                                        ? 'bg-gray-800 text-gray-300'
-                                        : 'bg-white shadow-md text-gray-900'
+                                    ? 'bg-gray-800 text-gray-300'
+                                    : 'bg-white shadow-md text-gray-900'
                                     }`}
                             >
                                 {skill}
@@ -198,8 +216,8 @@ const Portfolio = () => {
                             <div
                                 key={skill}
                                 className={`p-4 rounded-lg text-center transition-colors ${darkMode
-                                        ? 'bg-gray-800 text-gray-300'
-                                        : 'bg-white shadow-md text-gray-900'
+                                    ? 'bg-gray-800 text-gray-300'
+                                    : 'bg-white shadow-md text-gray-900'
                                     }`}
                             >
                                 {skill}
@@ -218,8 +236,8 @@ const Portfolio = () => {
                             <div
                                 key={skill}
                                 className={`p-4 rounded-lg text-center transition-colors ${darkMode
-                                        ? 'bg-gray-800 text-gray-300'
-                                        : 'bg-white shadow-md text-gray-900'
+                                    ? 'bg-gray-800 text-gray-300'
+                                    : 'bg-white shadow-md text-gray-900'
                                     }`}
                             >
                                 {skill}
