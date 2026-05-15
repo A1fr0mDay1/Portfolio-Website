@@ -25,6 +25,12 @@ const Portfolio = () => {
     // Projects data
     const projects = [
         {
+            title: "Tactical Mech Combat Game (Senior Capstone)",
+            description: "A grid-based tactical mech combat game built with a custom C++ backend and a Godot frontend. Features complex game state management, dynamic AI difficulty scaling, and a strict client-server architecture.",
+            link: "https://github.com/A1fr0mDay1/ug_hf_6",
+            tech: ["C++", "Godot", "Client-Server"]
+        },
+        {
             title: "Champion Archive",
             description: "A full-stack web application for League of Legends fans to view champion design evolution, take quizzes, and share gameplay.",
             link: "https://github.com/A1fr0mDay1/Coms319-Website",
@@ -62,7 +68,7 @@ const Portfolio = () => {
             'Java', 'Python', 'C++', 'C',
             'HTML/CSS', 'JavaScript', 'React', 'Node.js',
             'Express.js', 'SQL', 'MongoDB', 'Git',
-            'ARM Assembly', 'Algorithms', 'Excel', 'PowerPoint'
+            'ARM Assembly', 'Algorithms', 'Excel', 'Godot'
         ],
         cybersecurity: [
             'Wireshark', 'Nmap', 'Nessus', 'Metasploit'
